@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "productName": "One Plus 6T",
+      "releaseYear": 2015,
+      "releaseMonth": "June",
+      "productDescription": " Ladakh is a region in the Indian state of Jammu and Kashmir that currently extends from the Siachen Glacier in the Karakoram range to the main Great Himalayas to the south, inhabited by people of Indo-Aryan and Tibetan descent.",
+      "selected": false,
+      "imageName": "oneplus.jpg"
+    },
+    {
+      "productName": "Samsung M10",
+      "releaseYear": 2017,
+      "releaseMonth": "May",
+      "productDescription": " Ladakh is a region in the Indian state of Jammu and Kashmir that currently extends from the Siachen Glacier in the Karakoram range to the main Great Himalayas to the south, inhabited by people of Indo-Aryan and Tibetan descent.",
+      "selected": false,
+      "imageName": "samM10.jpg"
+    },
+    {
+      "productName": "Redmi Note 7",
+      "releaseYear": 2012,
+      "releaseMonth": "March",
+      "productDescription": " Ladakh is a region in the Indian state of Jammu and Kashmir that currently extends from the Siachen Glacier in the Karakoram range to the main Great Himalayas to the south, inhabited by people of Indo-Aryan and Tibetan descent.",
+      "selected": false,
+      "imageName": "Redminote7.jpeg"
+    },
+    {
+      "productName": "One Plus 6",
+      "releaseYear": 2018,
+      "releaseMonth": "december",
+      "productDescription": " Ladakh is a region in the Indian state of Jammu and Kashmir that currently extends from the Siachen Glacier in the Karakoram range to the main Great Himalayas to the south, inhabited by people of Indo-Aryan and Tibetan descent.",
+      "selected": false,
+      "imageName": "oneplus6.jpg"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "data": [
+    {
+      "viewLabel": "Title View",
+      "id": "TV"
+    },
+    {
+      "viewLabel": "Details View",
+      "id": "DV"
+    }
+  ]
+}

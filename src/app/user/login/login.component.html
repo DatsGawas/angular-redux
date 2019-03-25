@@ -1,10 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+
+        <amexio-row style="margin-top: 25%">
+          <amexio-column [size]="3">
+          </amexio-column>
+          <amexio-column [size]="6">
+            <amexio-card-ce >
+              <amexio-header-ce [background]="'linear-gradient(40deg,#2096ff,#05ffa3)'" [height]="'75px'" align="center">
+                <amexio-image width="100px"  height="100px" [filter]="'round'" path="assets/images/profilelogo.png"></amexio-image>
+              </amexio-header-ce>
+              <amexio-body-ce >
+                <form #loginForm="ngForm">
+                  <amexio-email-input [field-label]="'Email Id'" name ="email"
+                                      [(ngModel)]="login.email"
+                                      [place-holder]="'Enter Email Id'"
+                                      [allow-blank]="false">
+                  </amexio-email-input>
+                  <amexio-password-input [enable-popover]="true"
+                                         [field-label]="'Password Input'"
+                                         name ="password"
+                                         [(ngModel)]="login.password"
+                                         [place-holder]="'Enter Password'"
+                                         [allow-blank]="false">
+                  </amexio-password-input>
+                </form>
+              </amexio-body-ce>
+              <amexio-action-ce [align]="'end'" >
+                <amexio-button [label]="'Login'"
+                               [disabled]="!loginForm.valid"
+                               (onClick)="loginHandle()"
+                               [type]="'theme-color'">
+                </amexio-button>
+              </amexio-action-ce>
+
+              <amexio-action-ce [align]="'center'" [border-top]="true">
+                <amexio-floating-button [relative]="true" [type]="'red'" [icon]="'fa fa-google-plus'">
+                </amexio-floating-button>
+                <amexio-floating-button [relative]="true" [bg-color]="'#4267b2'" [icon]="'fa fa-facebook'">
+                </amexio-floating-button>
+                <amexio-floating-button [relative]="true" [bg-color]="'#0077B5'" [icon]="'fa fa-linkedin'">
+                </amexio-floating-button>
+              </amexio-action-ce>
+            </amexio-card-ce>
+          </amexio-column>
+          <amexio-column [size]="3">
+          </amexio-column>
+        </amexio-row>
+

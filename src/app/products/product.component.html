@@ -1,10 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+
+<amexio-layout-columns [fit]="true" [border]="false" [orientation]="'horizontal'" [alignment]="'end'">
+  <amexio-layout-item >
+    <amexio-dropdown [(ngModel)]="displayViewType"
+                     [place-holder]="'Choose view'"
+                     [data-reader]="'data'"
+                     [field-label]="'Product List View'"
+                     [http-url]="'assets/data/productview.json'"
+                     [http-method]="'get'"
+                     [display-field]="'viewLabel'"
+                     (onSingleSelect)="onViewSelectHandle($event)"
+                     [value-field]="'id'">
+    </amexio-dropdown>
+
+  </amexio-layout-item>
+</amexio-layout-columns>
+
+<amexio-row>
+  <amexio-column [size]="3" *ngFor="let p of productList">
+    <amexio-card-ce>
+      <amexio-header-ce [height]="'200px'" [color]="'white'" [bg-image]="'assets/images/' + p.imageName">
+        <amexio-badge [absolute]="true" [background]="'#e74c3c'" [color]="'white'" [top]="'0px'" [right]="'5%'">
+          <amexio-label>{{p.releaseYear}}</amexio-label>
+          <amexio-label>{{p.releaseMonth}}</amexio-label>
+        </amexio-badge>
+      </amexio-header-ce>
+      <amexio-body-ce>
+        <b>{{p.productName}} </b>
+        <p *ngIf="displayViewType == 'DV'">
+          {{p.productDescription}}
+
+        </p>
+      </amexio-body-ce>
+      <amexio-action-ce [align]="'end'">
+        <amexio-checkbox  [field-label]="'Add To Cart'"
+                          [(ngModel)]="p.selected"
+                          (onSelection)="addToCart(p)">
+        </amexio-checkbox>
+      </amexio-action-ce>
+    </amexio-card-ce>
+  </amexio-column>
+</amexio-row>
+
+
+
